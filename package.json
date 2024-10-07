@@ -1,7 +1,7 @@
 {
   "name": "eng-soft-equipe4",
   "version": "1.0.0",
-  "description": "Projeto da disciplina de Engenharia de Software dos alunos da POLI - UPE",
+  "description": "Projeto da disciplina de Engenharia de Software dos alunos da POLI - UPE - 2024.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
