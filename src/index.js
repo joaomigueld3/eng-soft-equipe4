@@ -1,25 +1,28 @@
 // server.js
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const userRoutes = require("./routes/userRoutes");
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const userRoutes = require('./routes/userRoutes');
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const MONGO_URL = process.env.MONGO_URL || '';
 
 // Middleware
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // Conectar ao MongoDB
-/* mongoose.connect('mongodb://localhost:27017/usercrud', {
+mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
 }).then(() => console.log('Conectado ao MongoDB'))
-  .catch(err => console.error('Erro ao conectar ao MongoDB', err)); */
+  .catch(err => console.error('Erro ao conectar ao MongoDB', err));
 
 // Rotas
-// app.use('/api', userRoutes);
+app.use('/api', userRoutes);
 
 // Iniciar o servidor
 app.listen(PORT, () => {
