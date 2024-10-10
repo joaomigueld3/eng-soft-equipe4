@@ -28,3 +28,6 @@ A primeira atividade do projeto consiste na implementação de um **CRUD** (Crea
 - Python 3.8+
 - Node.js 14+
 - Docker
+
+
+Commit Guedes
